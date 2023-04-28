@@ -28,7 +28,7 @@ namespace MYCLOCK
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //MainForm.Content = new Alarm();
+            MainForm.Content = new Alarm();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -38,12 +38,17 @@ namespace MYCLOCK
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            //MainForm.Content = new Timerform();
+            MainForm.Content = new Timerform();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             MainForm.Content = new WorldTime();
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            MainForm.Content = new Notesform();
         }
     }
 }
