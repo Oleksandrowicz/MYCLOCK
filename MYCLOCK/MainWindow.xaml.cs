@@ -45,5 +45,10 @@ namespace MYCLOCK
         {
             MainForm.Content = new WorldTime();
         }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

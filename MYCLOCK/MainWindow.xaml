@@ -17,11 +17,13 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Name="btn1" Content="🌎World Time" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E" Click="btn1_Click"/>
-            <Button Grid.Column="1" Name="btn2" Content="⏰Alarm" Click="Button_Click_1" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
-            <Button Grid.Column="2" Name="btn3" Content="⏱️Stopwatch" Click="Button_Click_2" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
-            <Button Grid.Column="3" Name="btn4" Content="⏲️Timer" Click="Button_Click_3" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
+            <Button Grid.Column="0" Name="btn1" Content="🌎&#xa;World Time" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E" Click="btn1_Click"/>
+            <Button Grid.Column="1" Name="btn2" Content="⏰&#xa;Alarm" Click="Button_Click_1" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
+            <Button Grid.Column="2" Name="btn3" Content="⏱️&#xa;Stopwatch" Click="Button_Click_2" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
+            <Button Grid.Column="3" Name="btn4" Content="⏲️&#xa;Timer" Click="Button_Click_3" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
+            <Button Grid.Column="4" Name="btn5" Content="📝&#xa;Notes" Click="btn5_Click" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"></Button>
         </Grid>
         <Button>Test</Button>
         
