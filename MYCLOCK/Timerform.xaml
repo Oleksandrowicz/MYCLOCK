@@ -106,7 +106,7 @@
             </Button.Template>
 
         </Button>
-        <Button Width="70" Height="70" Grid.Row="3" Grid.Column="2" Content="Start" FontSize="15" Background="#2a7008"  Foreground="#5ff516" >
+        <Button Width="70" Height="70" Grid.Row="3" Grid.Column="2" Content="Start" FontSize="15" Background="#172e1c"  Foreground="#6bc57b" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
