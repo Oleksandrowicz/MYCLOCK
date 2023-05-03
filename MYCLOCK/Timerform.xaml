@@ -7,122 +7,117 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="450"
       Title="Timerform">
+    
+   <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="20"></RowDefinition>
+        <RowDefinition Height="200"></RowDefinition>
+        <RowDefinition Height="50"></RowDefinition>
+        <RowDefinition Height="120"></RowDefinition>
+        <RowDefinition Height="50"></RowDefinition>
+        <RowDefinition Height="80"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+    </Grid.ColumnDefinitions>
 
-    <Grid>
+
+    <Grid Grid.Row="1" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"></RowDefinition>
-            <RowDefinition Height="200"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="120"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1.9*"></ColumnDefinition>
+            <ColumnDefinition Width="0.9*"></ColumnDefinition>
+            <ColumnDefinition Width="0.9*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1"  Name="hoursLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="hr" HorizontalAlignment="Left"  FontSize="17"></Label>
+            <Button  Click="decreaseButton_Click" Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">-</Button>
+            <Button Click="increaseButton_Click"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
+    </Grid>
+
+    <Grid Grid.Row="1" Grid.Column="1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.9*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="52"></ColumnDefinition>
+            <ColumnDefinition Width="9"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" Name="minutesLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="min" HorizontalAlignment="Left"  FontSize="17"></Label>
+            <Button Click="decreaseButton_Click2"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}" >-</Button>
+            <Button Click="increaseButton_Click2"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
+    </Grid>
+
+    <Grid Grid.Row="1" Grid.Column="2" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.9*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="52"></ColumnDefinition>
+            <ColumnDefinition Width="9"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" Name="secondsLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="sec" HorizontalAlignment="Left"  FontSize="17"></Label>
+        <Button Click="decreaseButton_Click3"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">⯆</Button>
+        <Button Click="increaseButton_Click3"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">⯅</Button>
+    </Grid>
 
 
-        <Grid Grid.Row="1" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.9*"></ColumnDefinition>
-                <ColumnDefinition Width="0.9*"></ColumnDefinition>
-                <ColumnDefinition Width="0.9*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="1" Grid.Column="1" Foreground="#80848c" Content="0" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="3" Grid.Column="1" Foreground="#80848c" Content="29" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="hr" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button   Grid.Row="4" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">⯆</Button>
-            <Button   Grid.Row="0" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">⯅</Button>
-        </Grid>
+    <Button Click ="stopButton_Click" Width="70" Height="70" Grid.Row="3" Grid.Column="0" Content="Cancel" FontSize="15" Foreground="#FFCCCCCC" BorderBrush="{x:Null}" Background="#FF313131">
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Grid>
+                    <Ellipse x:Name="Ellipse" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="Ellipse" Property="Stroke" Value="Blue"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Button.Template>
 
-        <Grid Grid.Row="1" Grid.Column="1" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.9*"></ColumnDefinition>
-                <ColumnDefinition Width="1*"></ColumnDefinition>
-                <ColumnDefinition Width="52"></ColumnDefinition>
-                <ColumnDefinition Width="9"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="1" Grid.Column="1" Foreground="#80848c" Content="0" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="3" Grid.Column="1" Foreground="#80848c" Content="59" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="min" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button   Grid.Row="4" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}" >⯆</Button>
-            <Button   Grid.Row="0" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">⯅</Button>
-        </Grid>
+    </Button>
+        <Button Click="startButton_Click" Name="startbtn" Width="70" Height="70" Grid.Row="3" Grid.Column="2" Content="Start" FontSize="15" Background="#172e1c"  Foreground="#6bc57b" >
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Grid>
+                    <Ellipse x:Name="Ellipse" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="Ellipse" Property="Stroke" Value="Blue"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
 
-        <Grid Grid.Row="1" Grid.Column="2" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.9*"></ColumnDefinition>
-                <ColumnDefinition Width="1*"></ColumnDefinition>
-                <ColumnDefinition Width="52"></ColumnDefinition>
-                <ColumnDefinition Width="9"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="1" Grid.Column="1" Foreground="#80848c" Content="0" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="3" Grid.Column="1" Foreground="#80848c" Content="59" HorizontalAlignment="Center"  FontSize="17"></Label>
-            <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="sec" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button   Grid.Row="4" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">⯆</Button>
-            <Button   Grid.Row="0" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">⯅</Button>
-        </Grid>
-
-        <Button Width="70" Height="70" Grid.Row="3" Grid.Column="0" Content="Cancel" FontSize="15" Foreground="#FFCCCCCC" BorderBrush="{x:Null}" Background="#FF313131">
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid>
-                        <Ellipse x:Name="Ellipse" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Ellipse" Property="Stroke" Value="Blue"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-
-        </Button>
-        <Button Width="70" Height="70" Grid.Row="3" Grid.Column="2" Content="Start" FontSize="15" Background="#172e1c"  Foreground="#6bc57b" >
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid>
-                        <Ellipse x:Name="Ellipse" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Ellipse" Property="Stroke" Value="Blue"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="25, 8" Background="Black" BorderBrush="{x:Null}" Foreground="#FFE8E8E8">Sound</Button>
+    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="25, 8" Background="Black" BorderBrush="{x:Null}" Foreground="#FFE8E8E8">Sound</Button>
 
     </Grid>
 </Page>
