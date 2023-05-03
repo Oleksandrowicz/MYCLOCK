@@ -46,8 +46,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Separator Background="Gray" Margin="15" Grid.Row="2" VerticalAlignment="Top"></Separator>
-        <ListBox x:Name="lapbox" Foreground="White" Background="#FF121212" Grid.Row="2" FontSize="36" BorderBrush="{x:Null}">
+        <Separator Background="#FF404040" Margin="15" Grid.Row="2" VerticalAlignment="Top"></Separator>
+        <ListBox Margin="0,15" x:Name="lapbox" Foreground="White" Background="#FF121212" Grid.Row="2" FontSize="30" BorderBrush="{x:Null}">
             
         </ListBox>
     </Grid>
