@@ -22,33 +22,43 @@ namespace MYCLOCK
     /// </summary>
     public partial class MainWindow : Window
     {
+        Alarm alarm;
+        Stopwatch stopwatch;
+        Timerform timerform;
+        WorldTime worldtime;
+        Notesform notesform;
         public MainWindow()
         {
+            alarm = new Alarm();
+            stopwatch = new Stopwatch();
+            timerform = new Timerform();
+            notesform = new Notesform();
+            worldtime = new WorldTime();
             InitializeComponent();
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainForm.Content = new Alarm();
+            MainForm.Content = alarm;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MainForm.Content = new Stopwatch();
+            MainForm.Content = stopwatch;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainForm.Content = new Timerform();
+            MainForm.Content = timerform;
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            MainForm.Content = new WorldTime();
+            MainForm.Content = worldtime;
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            MainForm.Content = new Notesform();
+            MainForm.Content = notesform;
         }
     }
 }
