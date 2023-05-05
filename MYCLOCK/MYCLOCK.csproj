@@ -12,4 +12,15 @@
     <Content Include="208-2085687_download-png-ico-icns-iphone-clock-icon-png.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data_access\Data_access.csproj" />
+  </ItemGroup>
+
 </Project>
