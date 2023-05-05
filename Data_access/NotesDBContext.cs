@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Data_access
 {
-    internal class NotesDBContext : DbContext
+    public class NotesDBContext : DbContext
     {
         public DbSet <Note> Notes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
