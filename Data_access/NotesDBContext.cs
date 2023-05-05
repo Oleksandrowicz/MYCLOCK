@@ -22,7 +22,7 @@ namespace Data_access
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Note>().Property(n => n.MessageNote).HasMaxLength(200).IsRequired();
-            modelBuilder.SeedNotes();
+            modelBuilder.SeedNotes(); 
             
         }
     }
