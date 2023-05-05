@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Data_access
 {
-    internal class NotesDBContext : DbContext
+    public class NotesDBContext : DbContext
     {
         public DbSet <Note> Notes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,6 +23,7 @@ namespace Data_access
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Note>().Property(n => n.MessageNote).HasMaxLength(200).IsRequired();
             modelBuilder.SeedNotes();
+            //MessageBox.Show("Hello");
             
         }
     }
