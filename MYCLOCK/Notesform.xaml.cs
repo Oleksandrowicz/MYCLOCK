@@ -22,12 +22,22 @@ namespace MYCLOCK
     /// </summary>
     public partial class Notesform : Page
     {
+
+        AddNoteForm addNote;
+
         NotesDBContext context = new NotesDBContext();
+ 
         public Notesform()
         {
+            addNote = new AddNoteForm();
             InitializeComponent();
             var res = context.Notes;
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            addNote.Show();
         }
     }
 }
