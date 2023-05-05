@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MYCLOCK
 {
     /// <summary>
-    /// Interaction logic for Notesform.xaml
+    /// Interaction logic for AddNoteForm.xaml
     /// </summary>
-    public partial class Notesform : Page
+    public partial class AddNoteForm : Window
     {
-        AddNoteForm addNote;
-        public Notesform()
+        public AddNoteForm()
         {
-            addNote = new AddNoteForm();
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            addNote.Show();
         }
     }
 }
