@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MYCLOCK"
         mc:Ignorable="d"
-        Title="AddNoteForm" Height="600" Width="450">
+        Title="AddNoteForm" Height="600" Width="450" Background="#FF121212" Foreground="White">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="5*" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding Notes}" Grid.Row="2" BorderBrush="{x:Null}" Background="#FF989898" Foreground="White">
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label></Label>
+                        <TextBlock Text="{Binding MessageINFO}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </ListBox>
     </Grid>
 </Window>
