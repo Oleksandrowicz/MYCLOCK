@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data_access;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,18 @@ using System.Windows.Shapes;
 
 namespace MYCLOCK
 {
+
     /// <summary>
     /// Interaction logic for Notesform.xaml
     /// </summary>
     public partial class Notesform : Page
     {
+        NotesDBContext context = new NotesDBContext();
         public Notesform()
         {
             InitializeComponent();
+            var res = context.Notes;
+
         }
     }
 }
