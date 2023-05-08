@@ -21,5 +21,12 @@ namespace Data_access.Helpers
                 new Note(){ ID = 4, MessageNote = "by car", Date = new DateTime(2023,6,17)},
            });
         }
+        public static void SeedAlarms(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AlarmItem>().HasData(new AlarmItem[]
+            {
+                new AlarmItem(){ ID = 1, Title = "Example alarm", Time = new DateTime(2023,5,8,17,10,00)},
+            });
+        }
     }
 }

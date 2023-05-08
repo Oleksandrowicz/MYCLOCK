@@ -22,11 +22,11 @@ namespace MYCLOCK
     /// </summary>
     public partial class AddNoteForm : Window
     {
-        ViewModel viewModel;
+        Viewmodel viewModel;
         public AddNoteForm()
         {
             InitializeComponent();
-            viewModel = new ViewModel();
+            viewModel = new Viewmodel();
             //notebox.ItemsSource = viewModel.context.Notes.ToArray();
             this.DataContext= viewModel;
             viewModel.CreateCollection();
@@ -34,11 +34,11 @@ namespace MYCLOCK
 
     }
 
-    class ViewModel
+    partial class Viewmodel
     {
         ObservableCollection<Note> notes= new ObservableCollection<Note>();
-        public NotesDBContext context = new NotesDBContext();
-        public ViewModel() {
+       
+        public Viewmodel() {
             
         }
         //public ViewModel(NotesDBContext context) { this.context = context; }
@@ -46,11 +46,14 @@ namespace MYCLOCK
         
         public void CreateCollection() {
 
-            var res = context.Notes.ToArray();
-            foreach (var item in res)
+            using (NotesDBContext context = new NotesDBContext())
             {
-                notes.Add(item);
-                //context.Notes.Add(item.MessageNote.ToString());
+                var res = context.Notes.ToArray();
+                foreach (var item in res)
+                {
+                    notes.Add(item);
+                    //context.Notes.Add(item.MessageNote.ToString());
+                }
             }
         }
 
