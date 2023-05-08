@@ -38,10 +38,10 @@
             <ColumnDefinition Width="0.9*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1"  Name="hoursLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="0"  Name="hoursLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
         <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="hr" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button  Click="decreaseButton_Click" Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">-</Button>
-            <Button Click="increaseButton_Click"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
+            <Button Background="#8B8686" Click="decreaseButton_Click" Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">-</Button >
+            <Button Background="#8B8686" Click="increaseButton_Click"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
     </Grid>
 
     <Grid Grid.Row="1" Grid.Column="1" >
@@ -58,10 +58,10 @@
             <ColumnDefinition Width="52"></ColumnDefinition>
             <ColumnDefinition Width="9"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" Name="minutesLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="0" Name="minutesLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
         <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="min" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button Click="decreaseButton_Click2"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}" >-</Button>
-            <Button Click="increaseButton_Click2"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
+            <Button Background="#8B8686" Click="decreaseButton_Click2"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}" >-</Button>
+            <Button Background="#8B8686" Click="increaseButton_Click2"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
     </Grid>
 
     <Grid Grid.Row="1" Grid.Column="2" >
@@ -78,10 +78,10 @@
             <ColumnDefinition Width="52"></ColumnDefinition>
             <ColumnDefinition Width="9"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="1" Name="secondsLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Content="0" Name="secondsLabel" HorizontalAlignment="Center"  FontSize="17"></Label>
         <Label Grid.Row="2" Grid.Column="2" Foreground="White" Content="sec" HorizontalAlignment="Left"  FontSize="17"></Label>
-            <Button Click="decreaseButton_Click3"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">-</Button>
-            <Button Click="increaseButton_Click3"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
+            <Button Background="#8B8686" Click="decreaseButton_Click3"  Grid.Row="3" Grid.ColumnSpan="4" Width="40" Height="20" FontSize="15" BorderBrush="{x:Null}">-</Button>
+            <Button Background="#8B8686" Click="increaseButton_Click3"  Grid.Row="1" Grid.ColumnSpan="4" Width="40" Height="20"  FontSize="15" BorderBrush="{x:Null}">+</Button>
     </Grid>
 
 
