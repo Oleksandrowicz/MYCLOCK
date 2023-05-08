@@ -37,8 +37,8 @@ namespace MYCLOCK
         {
 
         }
-        partial class Viewmodel
-        {
+        partial class Viewmodel 
+        { 
             ObservableCollection<AlarmItem> alarms = new ObservableCollection<AlarmItem>();
             public IEnumerable<AlarmItem> Alarmbox => alarms;
             public Viewmodel() { }
