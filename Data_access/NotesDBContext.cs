@@ -25,6 +25,7 @@ namespace Data_access
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Note>().Property(n => n.MessageNote).HasMaxLength(200).IsRequired();
             modelBuilder.SeedNotes();
+            modelBuilder.SeedAlarms();
             modelBuilder.Entity<AlarmItem>().Property(n => n.Title).HasMaxLength(30).IsRequired();
             //MessageBox.Show("Hello");
             

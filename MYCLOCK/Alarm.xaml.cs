@@ -28,6 +28,9 @@ namespace MYCLOCK
         public Alarm()
         {
             InitializeComponent();
+            viewModel = new Viewmodel();
+            this.DataContext = viewModel;
+            viewModel.CreateAlarmCollection();
         }
 
         private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -47,6 +50,7 @@ namespace MYCLOCK
                     var res = context.Alarms.ToArray();
                     foreach (var item in res)
                     {
+                        
                         alarms.Add(item);
                         //context.Notes.Add(item.MessageNote.ToString());
                     }

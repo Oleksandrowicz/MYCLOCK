@@ -13,7 +13,7 @@ namespace Data_access.Entities
         public DateTime Time { get; set; }
         public override string ToString()
         {
-            return base.ToString();
+            return $"{Time.ToString(@"HH:mm")}\n{Title}";
         }
     }
 }
