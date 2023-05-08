@@ -12,6 +12,7 @@ namespace Data_access
     public class NotesDBContext : DbContext
     {
         public DbSet <Note> Notes { get; set; }
+        public DbSet <AlarmItem> Alarms { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -23,6 +24,7 @@ namespace Data_access
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Note>().Property(n => n.MessageNote).HasMaxLength(200).IsRequired();
             modelBuilder.SeedNotes();
+            modelBuilder.Entity<AlarmItem>().Property(n => n.Title).HasMaxLength(30).IsRequired();
             //MessageBox.Show("Hello");
             
         }
