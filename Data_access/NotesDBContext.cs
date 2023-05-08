@@ -11,7 +11,7 @@ namespace Data_access
 {
     public class NotesDBContext : DbContext
     {
-        public DbSet <Note> Notes { get; set; }
+        public DbSet<Note> Notes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
