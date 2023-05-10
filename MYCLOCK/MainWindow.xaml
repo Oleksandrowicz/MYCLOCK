@@ -30,8 +30,8 @@
                 <ColumnDefinition></ColumnDefinition>
 
             </Grid.ColumnDefinitions>
-            <tb:TaskbarIcon Visibility="Visible" ToolTipText="MYCLOCK" TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown" TrayBalloonTipClicked="TaskbarIcon_TrayBalloonTipClicked" MouseRightButtonDown="TaskbarIcon_MouseRightButtonDown"/>
-            <Button Grid.Column="0" Name="btn1" Content="      🌎&#xa;World Time" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E" Click="btn1_Click"/>
+
+                    <Button Grid.Column="0" Name="btn1" Content="      🌎&#xa;World Time" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E" Click="btn1_Click"/>
             <Button Grid.Column="1" Name="btn2" Content="  ⏰&#xa;Alarm" Click="Button_Click_1" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
             <Button Grid.Column="2" Name="btn3" Content="      ⏱️&#xa;Stopwatch" Click="Button_Click_2" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>
             <Button Grid.Column="3" Name="btn4" Content="  ⏲️&#xa;Timer" Click="Button_Click_3" BorderThickness="0" FontFamily="Bahnschrift SemiBold" FontSize="14" Background="Black" Foreground="#FFEC9F2E"/>

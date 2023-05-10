@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Windows.Forms;
 
 
 namespace MYCLOCK
@@ -31,11 +32,17 @@ namespace MYCLOCK
         AlarmItem alarm;
         int EditClickTimes = 0;
         DispatcherTimer timer;
-        
+        System.Windows.Forms.NotifyIcon notify;
         //public event Action FlashFunctionRequested;
         public Alarm()
         {
+
+        }
+        public Alarm(System.Windows.Forms.NotifyIcon notifyIcon)
+        {
             InitializeComponent();
+            notify = new System.Windows.Forms.NotifyIcon();
+            notify = notifyIcon;
             alarm = null;
             
             viewModel = new Viewmodel();
@@ -57,7 +64,7 @@ namespace MYCLOCK
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message);
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
             }
             else if (EditClickTimes != 1)
@@ -125,7 +132,7 @@ namespace MYCLOCK
                     catch (Exception ex)
                     {
 
-                        MessageBox.Show(ex.Message);
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
                     }
                     PlusLb.Content = "Delete";
                 PlusLb.Foreground = Brushes.DarkRed;
@@ -148,7 +155,7 @@ namespace MYCLOCK
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
-            
+            //notify.ShowBalloonTip(500, "Hide", "Close", System.Windows.Forms.ToolTipIcon.Info);
 
         }
 
@@ -159,8 +166,8 @@ namespace MYCLOCK
             {
                 if (current.Hour == item.Time.Hour && current.Minute == item.Time.Minute)
                 {
-                    
-                    
+                    notify.ShowBalloonTip(500, "Alarm", item.Title, System.Windows.Forms.ToolTipIcon.Info);
+                    //System.Windows.Forms.MessageBox.Show("test");
                 }
             }
         }
