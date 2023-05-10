@@ -32,31 +32,8 @@ namespace MYCLOCK
             viewModel.CreateCollection();
         }
 
-    }
-
-    partial class Viewmodel
-    {
-        ObservableCollection<Note> notes= new ObservableCollection<Note>();
        
-        public Viewmodel() {
-            
-        }
-        //public ViewModel(NotesDBContext context) { this.context = context; }
-        public IEnumerable<Note> Notes => notes; 
-        
-        public void CreateCollection() {
-
-            using (NotesDBContext context = new NotesDBContext())
-            {
-                var res = context.Notes.ToArray();
-                foreach (var item in res)
-                {
-                    notes.Add(item);
-                    //context.Notes.Add(item.MessageNote.ToString());
-                }
-            }
-        }
-
-
     }
+
+   
 }
