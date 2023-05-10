@@ -65,7 +65,8 @@ namespace MYCLOCK
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Hide();
+            //Application.Current.Shutdown();
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -78,6 +79,19 @@ namespace MYCLOCK
 
         }
 
+        private void TaskbarIcon_TrayLeftMouseDown(object sender, RoutedEventArgs e)
+        {
+            this.Show();
+        }
 
+        private void TaskbarIcon_TrayBalloonTipClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TaskbarIcon_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
