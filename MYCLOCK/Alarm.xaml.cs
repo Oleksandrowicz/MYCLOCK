@@ -31,13 +31,13 @@ namespace MYCLOCK
         AlarmItem alarm;
         int EditClickTimes = 0;
         DispatcherTimer timer;
-        System.Windows.Forms.NotifyIcon notifyIcon;
+        
         //public event Action FlashFunctionRequested;
         public Alarm()
         {
             InitializeComponent();
             alarm = null;
-            notifyIcon = new System.Windows.Forms.NotifyIcon();
+            
             viewModel = new Viewmodel();
             this.DataContext = viewModel;
             viewModel.CreateAlarmCollection();
@@ -148,9 +148,8 @@ namespace MYCLOCK
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
-            notifyIcon.Text = "MYCLOCK";
-            notifyIcon.Visible = true;
-            notifyIcon.Click += NotifyIcon_Click;
+            
+
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
@@ -166,12 +165,6 @@ namespace MYCLOCK
             }
         }
 
-        private void NotifyIcon_Click(object? sender, EventArgs e)
-        {
-            //MainWindow.WindowState = WindowState.Normal;
-            //MainWindow.Activate();
-            Application.Current.Run();
-        }
     }
     }
 

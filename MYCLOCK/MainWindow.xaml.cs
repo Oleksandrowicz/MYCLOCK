@@ -27,14 +27,16 @@ namespace MYCLOCK
         Timerform timerform;
         WorldTime worldtime;
         Notesform notesform;
+        System.Windows.Forms.NotifyIcon notifyIcon;
         public MainWindow()
         {
+            InitializeComponent();
             alarm = new Alarm();
             stopwatch = new Stopwatch();
             timerform = new Timerform();
             notesform = new Notesform();
             worldtime = new WorldTime();
-            InitializeComponent();
+
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -70,5 +72,12 @@ namespace MYCLOCK
         {
             this.DragMove();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
