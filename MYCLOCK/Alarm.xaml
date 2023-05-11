@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MYCLOCK"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="450"
-      Title="Alarm">
+      Title="Alarm" Loaded="Page_Loaded">
 
     <Grid> 
         <Grid.ColumnDefinitions>
@@ -19,10 +19,10 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="7*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Margin="12" Foreground="Orange">Edit</Label>
-        <Label MouseDoubleClick="Label_MouseDoubleClick" Margin="7" FontSize="20" HorizontalAlignment="Right" Foreground="Orange" Grid.Column="2">+</Label>
+        <Label Name="EditLb" MouseDoubleClick="EditButtonClick" Margin="8,0" FontSize="14" Foreground="Orange">Edit</Label>
+        <Label Name="PlusLb" MouseDoubleClick="Label_MouseDoubleClick" Margin="8,0" FontSize="18" HorizontalAlignment="Right" Foreground="Orange" Grid.Column="2">+</Label>
         <Label Grid.Row="1" Foreground="white" FontWeight="Bold" FontSize="32" Grid.ColumnSpan="2">Alarm</Label>
-        <ListBox BorderThickness="0" FontSize="30" Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding Alarmbox}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFC8C8C8">
+        <ListBox BorderThickness="0" FontSize="30" Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding Alarmbox}" SelectedItem="{Binding SelectedAlarm}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFC8C8C8">
             <!--<ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

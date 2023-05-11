@@ -27,16 +27,21 @@ namespace MYCLOCK
         Timerform timerform;
         WorldTime worldtime;
         Notesform notesform;
+
+        System.Windows.Forms.NotifyIcon notifyIcon;
+
         
         
+
         public MainWindow()
         {
-            alarm = new Alarm();
+            InitializeComponent();
+            
             stopwatch = new Stopwatch();
             timerform = new Timerform();
             notesform = new Notesform();
             worldtime = new WorldTime();
-            InitializeComponent();
+            notifyIcon = new System.Windows.Forms.NotifyIcon();
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -65,12 +70,27 @@ namespace MYCLOCK
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
+            //this.Hide();
             Application.Current.Shutdown();
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            this.DragMove(); 
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            notifyIcon.Icon = new System.Drawing.Icon("ICON.ico");
+            notifyIcon.Visible = true;
+            notifyIcon.Text = "MYCLOCK";
+            notifyIcon.MouseClick += NotifyIcon_MouseClick;
+            alarm = new Alarm(notifyIcon);
+        }
+
+        private void NotifyIcon_MouseClick(object? sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
