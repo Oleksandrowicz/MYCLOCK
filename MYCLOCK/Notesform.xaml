@@ -9,6 +9,56 @@
       Title="Notesform">
     
     <Grid>
-        <Button Click="Button_Click">+</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button  Content ="↩ Back"  Margin="5" Foreground="#FFEC9F2E" Background="Black" ></Button >
+
+        <Label FontSize="25" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" >Notes</Label>
+        <TextBox Name="TxtBox1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="4"></TextBox>
+        <Grid Grid.Column="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <Button FontSize="20" Background="Black" HorizontalAlignment="Center" Grid.Column="1"  Width="30" Height="30" Margin="6" Foreground="#FFEC9F2E" Click="Add_New_Note" >+</Button>
+            <Button FontSize="12" Background="Black" HorizontalAlignment="Center" Grid.Column="0"  Width="40" Height="30" Margin="6" Foreground="#FFEC9F2E" Click ="Edit_Note" >Edit</Button>
+            <Button FontSize="12" Background="Black" HorizontalAlignment="Center" Grid.Column="2"  Width="40" Height="30" Margin="6" Foreground="#FFEC9F2E" Click ="Remuve_Note" >-</Button>
+
+
+
+
+        </Grid>
+        <ListBox SelectionChanged="ListBox_SelectionChanged" 
+                 SelectedItem="{Binding SelectedItem}" Name="ListBox" Background="Black" Grid.RowSpan="4" Grid.ColumnSpan="4" ItemsSource="{Binding Notes}" Grid.Row="2" BorderBrush="{x:Null}"  Foreground="White">
+            
+
+
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label></Label>
+                        <TextBlock Text="{Binding MessageINFO}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </ListBox>
+
     </Grid>
 </Page>

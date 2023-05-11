@@ -8,15 +8,20 @@
         Title="AddNoteForm" Height="600" Width="450" Background="#FF121212" Foreground="White">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40" ></RowDefinition>
             <RowDefinition Height="5*" ></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox ItemsSource="{Binding Notes}" Grid.Row="2" BorderBrush="{x:Null}" Background="#FF989898" Foreground="White">
+        <Button  Content ="↩ Back"  Margin="5" Foreground="#FFEC9F2E" Background="Black"  ></Button >
+        <TextBox Grid.Row="1" Grid.ColumnSpan="3" Margin="10"></TextBox>
+        <ListBox  Background="Black" Grid.RowSpan="4" Grid.ColumnSpan="3" ItemsSource="{Binding Notes}" Grid.Row="2" BorderBrush="{x:Null}"  Foreground="White">
             <!--<ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

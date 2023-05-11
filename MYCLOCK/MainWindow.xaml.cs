@@ -27,7 +27,12 @@ namespace MYCLOCK
         Timerform timerform;
         WorldTime worldtime;
         Notesform notesform;
+
         System.Windows.Forms.NotifyIcon notifyIcon;
+
+        
+        
+
         public MainWindow()
         {
             InitializeComponent();
