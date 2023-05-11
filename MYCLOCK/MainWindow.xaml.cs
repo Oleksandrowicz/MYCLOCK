@@ -27,6 +27,8 @@ namespace MYCLOCK
         Timerform timerform;
         WorldTime worldtime;
         Notesform notesform;
+        
+        
         public MainWindow()
         {
             alarm = new Alarm();
