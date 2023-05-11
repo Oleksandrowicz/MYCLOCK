@@ -71,7 +71,7 @@ namespace MYCLOCK
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            this.DragMove(); 
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
