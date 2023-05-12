@@ -88,67 +88,92 @@ namespace MYCLOCK
                 }
             }
         }
-        public void Add_New_Note(string Name) { 
-            Note NewNote = new Note(Name, DateTime.Now); 
-            notes.Add(NewNote);
-            using (NotesDBContext context = new NotesDBContext())
+        public void Add_New_Note(string Name) {
+            try
             {
-                context.Notes.Add(NewNote);
-                context.SaveChanges();
-               
+                Note NewNote = new Note(Name, DateTime.Now);
+                notes.Add(NewNote);
+                using (NotesDBContext context = new NotesDBContext())
+                {
+                    context.Notes.Add(NewNote);
+                    context.SaveChanges();
+
+                }
             }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+            
 
         }
         public void Remuve_SelectedNote(Note note){
-            if(note != null)
+            try
             {
-                notes.Remove(note);
+                if (note != null)
+                {
+                    notes.Remove(note);
+                }
+                using (NotesDBContext context = new NotesDBContext())
+                {
+                    context.Notes.Remove(note);
+                    context.SaveChanges();
+                }
             }
-            using (NotesDBContext context = new NotesDBContext())
+            catch (Exception)
             {
-                context.Notes.Remove(note);
-                context.SaveChanges();
 
+                //throw;
             }
+            
             
 
         }
 
             public void Edit_SelectedNote(string Name, Note note)
         {
-          
 
 
-
-            //Note NewNote = new Note(Name, DateTime.Now);
-            //notes.Add(NewNote);
-            using (NotesDBContext context = new NotesDBContext())
+            try
             {
-                
-                var res = context.Notes.Find(note.ID);
-
-                
-                if (res != null )
+                //Note NewNote = new Note(Name, DateTime.Now);
+                //notes.Add(NewNote);
+                using (NotesDBContext context = new NotesDBContext())
                 {
-                    
-                    res.MessageNote = Name;
-                    //notes.Add(res);
-                    //notes.Remove(SelectedItem);
-                    var res2 = notes.FirstOrDefault(n => n.ID == note.ID);
-                    res2.MessageNote = Name;
 
-                }
-
-                context.SaveChanges();
-                notes.Clear();
-                var a = context.Notes.ToList();
-                foreach (var item in a)
-                {
-                    notes.Add(item);
-                }
+                    var res = context.Notes.Find(note.ID);
 
 
+                    if (res != null)
+                    {
+
+                        res.MessageNote = Name;
+                        //notes.Add(res);
+                        //notes.Remove(SelectedItem);
+                        var res2 = notes.FirstOrDefault(n => n.ID == note.ID);
+                        res2.MessageNote = Name;
+
+                    }
+
+                    context.SaveChanges();
+                    notes.Clear();
+                    var a = context.Notes.ToList();
+                    foreach (var item in a)
+                    {
+                        notes.Add(item);
+                    }
+                }  }
+            catch (Exception)
+            {
+
+                //throw;
             }
+
+            
+
+
+            
             
 
 
