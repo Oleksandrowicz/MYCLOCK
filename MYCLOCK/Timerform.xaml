@@ -117,7 +117,7 @@
         </Button.Template>
     </Button>
 
-    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="25, 8" Background="Black" BorderBrush="{x:Null}" Foreground="#FFE8E8E8">Sound</Button>
+    
 
     </Grid>
 </Page>
