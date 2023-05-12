@@ -22,5 +22,5 @@
         <Label Grid.Row="2" Margin="10,0" Foreground="White" FontSize="22" HorizontalAlignment="Right" Name="worldtimetb"></Label>
         <Label Grid.Row="2" Margin="10,40" Foreground="White" FontSize="22" HorizontalAlignment="Right" Name="worldtimetb2"></Label>
 
-    </Grid>
+    </Grid >
 </Page>

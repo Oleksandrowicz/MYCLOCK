@@ -25,7 +25,7 @@
 
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button  Content ="↩ Back"  Margin="5" Foreground="#FFEC9F2E" Background="Black" ></Button >
+        
 
         <Label FontSize="25" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" >Notes</Label>
         <TextBox Name="TxtBox1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="4"></TextBox>
